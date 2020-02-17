@@ -67,11 +67,19 @@ class Student
   
   
   
+<<<<<<< HEAD
   def self.first_X_students_in_grade_10(number)
     sql = <<-SQL
       SELECT *
       FROM students
       WHERE grade =  10 LIMIT #{number}
+=======
+  def self.first_X_students_in_grade_10(X)
+    sql = <<-SQL
+      SELECT *
+      FROM students
+      WHERE grade =  10
+>>>>>>> 3311c1b3ac174b36cf0e99ddaf8b349ab7a9bf3e
     SQL
     
     DB[:conn].execute(sql).map do |row|
@@ -94,6 +102,7 @@ class Student
   
   
   
+<<<<<<< HEAD
   def self.all_students_in_grade_X(x)
     sql = <<-SQL
       SELECT *
@@ -104,10 +113,18 @@ class Student
     DB[:conn].execute(sql).map do |row|
       self.new_from_db(row)   
     end
+=======
+  def self.all_students_in_grade_X
+  
+>>>>>>> 3311c1b3ac174b36cf0e99ddaf8b349ab7a9bf3e
   end 
   
   
   
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 3311c1b3ac174b36cf0e99ddaf8b349ab7a9bf3e
   def save
     sql = <<-SQL
       INSERT INTO students (name, grade) 
